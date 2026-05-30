@@ -1,6 +1,4 @@
-<script setup>
-// COMPONENTE: Sección principal (Hero) con llamada a la acción
-</script>
+<script setup></script>
 
 <template>
   <header class="hero" id="inicio">

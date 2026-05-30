@@ -1,5 +1,4 @@
 <script setup>
-// COMPONENTE: Botón reutilizable
 defineProps({
   type: { type: String, default: 'button' },
   block: { type: Boolean, default: false },

@@ -1,6 +1,4 @@
 <script setup>
-// COMPONENTE: Tarjeta individual de un producto del menú
-// Recibe un producto por props y muestra su información.
 defineProps({
   item: { type: Object, required: true },
 })

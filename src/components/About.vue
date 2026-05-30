@@ -1,6 +1,4 @@
-<script setup>
-// COMPONENTE: Sección "Nosotros" con imagen, texto y estadísticas
-</script>
+<script setup></script>
 
 <template>
   <section class="about" id="nosotros">

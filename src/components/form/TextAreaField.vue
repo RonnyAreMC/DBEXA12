@@ -1,5 +1,4 @@
 <script setup>
-// COMPONENTE: Área de texto reutilizable (textarea)
 defineProps({
   label: String,
   modelValue: String,

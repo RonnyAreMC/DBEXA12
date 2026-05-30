@@ -1,15 +1,15 @@
 <script setup>
-// COMPONENTE: Campo de texto reutilizable (input)
-// Usa v-model gracias a modelValue + update:modelValue.
-// Es independiente: para reubicarlo solo mueves la etiqueta en el formulario.
 defineProps({
   label: String,
   type: { type: String, default: 'text' },
   modelValue: String,
   error: String,
   placeholder: { type: String, default: '' },
+  inputmode: String,
+  maxlength: [String, Number],
+  autocomplete: String,
 })
-defineEmits(['update:modelValue'])
+defineEmits(['update:modelValue', 'blur'])
 </script>
 
 <template>
@@ -19,8 +19,12 @@ defineEmits(['update:modelValue'])
       :type="type"
       :value="modelValue"
       :placeholder="placeholder"
+      :inputmode="inputmode"
+      :maxlength="maxlength"
+      :autocomplete="autocomplete"
       :class="{ invalid: error }"
       @input="$emit('update:modelValue', $event.target.value)"
+      @blur="$emit('blur')"
     />
     <span v-if="error" class="error-msg">{{ error }}</span>
   </div>

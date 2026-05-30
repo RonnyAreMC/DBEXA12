@@ -1,13 +1,11 @@
 <script setup>
-// COMPONENTE: Campo de selección reutilizable (select)
-// Las opciones llegan por props. Componente independiente y movible.
 defineProps({
   label: String,
   modelValue: String,
   error: String,
   options: { type: Array, default: () => [] },
 })
-defineEmits(['update:modelValue'])
+defineEmits(['update:modelValue', 'blur'])
 </script>
 
 <template>
@@ -17,6 +15,7 @@ defineEmits(['update:modelValue'])
       :value="modelValue"
       :class="{ invalid: error }"
       @change="$emit('update:modelValue', $event.target.value)"
+      @blur="$emit('blur')"
     >
       <option value="">Seleccione...</option>
       <option v-for="opt in options" :key="opt" :value="opt">{{ opt }}</option>

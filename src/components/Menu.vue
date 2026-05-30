@@ -1,9 +1,6 @@
 <script setup>
 import MenuCard from './MenuCard.vue'
 import { menuItems } from '../data/menu'
-
-// COMPONENTE: Sección del menú. Recorre los datos con v-for y crea
-// una tarjeta (MenuCard) por cada producto -> reutilización de componentes.
 </script>
 
 <template>

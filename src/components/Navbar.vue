@@ -1,14 +1,13 @@
 <script setup>
 import { ref } from 'vue'
 
-// COMPONENTE: Barra de navegación responsive con menú hamburguesa
 const open = ref(false)
 </script>
 
 <template>
   <nav class="navbar">
     <div class="container">
-      <a href="#inicio" class="logo">☕ Café Aroma</a>
+      <a href="#inicio" class="logo">Café Aroma</a>
 
       <button class="nav-toggle" @click="open = !open" aria-label="Abrir menú">
         ☰
